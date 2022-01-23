@@ -26,11 +26,10 @@
 }
 header {
   min-height: 100px;
-  background: linear-gradient(
-    360deg,
-    rgba(237, 215, 137, 0.9) 0%,
-    rgba(233, 130, 131, 0.9) 0%
-  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 .container {
   max-width: 1200px;
@@ -57,8 +56,9 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-end;
+  list-style: none;
 }
-.menu > div {
+.menu > li {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 600;
@@ -66,12 +66,32 @@ header {
   line-height: 16px;
   width: 100px;
   text-transform: uppercase;
+  text-align: center;
+}
+.menu > li > a {
+  transition: 0.3s;
+}
+.menu > li::after {
+  content: "";
+  height: 1px;
+  background-color: #f4bf87;
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+  opacity: 0;
+  transition: 0.3s;
+}
+.menu > li > a:hover {
+  color: #f4bf87;
+}
+.menu > li:hover::after {
+  opacity: 1;
 }
 .search_and_buy {
   min-width: 100px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 A {
   color: #ffffff;
@@ -93,7 +113,7 @@ A {
 }
 
 .container > p {
-  padding: 77px;
+  padding: 170px 0 77px 0;
   text-align: center;
   font-family: "Kaushan";
   font-style: normal;
@@ -126,15 +146,19 @@ A {
   height: 5px;
   width: 170px;
   background: #ffffff;
-  margin: 42px auto;
+  margin: 42px auto 75px auto;
 }
-
 .container > .bottom {
-  margin: 86px auto 0 auto;
-  width: 318px;
-  height: 54px;
-  padding: 10px 50px 10px 50px;
+  display: flex;
+  justify-content: center;
+}
+.container > .bottom > div {
+  padding: 20px 90px;
   border: 4px solid #ffffff;
+  align-items: center;
+  text-align: center;
+}
+.container > .bottom {
   font-family: "Raleway";
   font-style: normal;
   font-weight: bold;
@@ -144,8 +168,22 @@ A {
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
+  transition: 0.3s;
 }
-
+/* не получилось сделать норм гаведение на 
+эту кнопку */
+.container > .bottom :hover {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #e4be8d;
+  background-color: #ffffff;
+}
 .bottoms > div {
   height: 85px;
   width: 260px;
@@ -160,8 +198,17 @@ A {
   text-transform: uppercase;
   padding-top: 20px;
   color: #ffffff;
+  transition: 0.5s;
 }
-
+.bottoms > div :hover {
+  color: #f38281;
+  border: 0px;
+  animation: step-end;
+}
+.bottoms :hover {
+  border-top: 4px solid #f38281;
+  animation: step-end;
+}
 .bottoms {
   margin-top: 82px;
   text-align: center;
@@ -188,6 +235,7 @@ a > p {
 }
 .title_of_page {
   padding: 50px 0px 50px 0px;
+  text-align: center;
 }
 .title_of_page > .main_title {
   text-align: center;
@@ -240,14 +288,38 @@ a > p {
   max-width: 350px;
   height: 338px;
   margin-top: 30px;
+  position: relative;
 }
-
-.pictures_what_we_do > .picture_what_we_do_one {
-  background-image: url(./images/background_picture1.png);
-  background-repeat: no-repeat;
-  background-position: 16px 16px;
+.hower_one {
+  width: 370px;
+  height: 338px;
+  background: linear-gradient(
+    360deg,
+    rgba(237, 215, 137, 0.9) 0%,
+    rgba(233, 130, 131, 0.9) 100%
+  );
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  opacity: 0%;
 }
-.pictures_what_we_do > .picture_what_we_do_two {
+.hower_one > img {
+  width: 40px;
+  height: 40px;
+}
+.hower_one > p {
+  font-family: "Raleway";
+  font-size: 24px;
+  color: #ffffff;
+  padding-top: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 .container_about {
   max-width: 1200px;
@@ -262,7 +334,15 @@ a > p {
   margin-top: 108px;
   background-image: url(./images/background_picture1.png);
 }
-
+.picture_what_we_do_one :hover {
+  opacity: 100%;
+}
+.picture_what_we_do_two :hover {
+  opacity: 100%;
+}
+.picture_what_we_do_three :hover {
+  opacity: 100%;
+}
 .container_about > .about-us {
   height: 235px;
   width: 234px;
@@ -303,13 +383,12 @@ a > p {
 
 /* LIST 3 */
 
-.list3 {
+.we_work_with {
   text-align: center;
-  max-height: 820px;
-  background: #e5e5e5;
-  padding-bottom: 1px;
+  min-height: 820px;
+  background: #ffffff;
 }
-.list3 > .text3-1 {
+.container > .text3-1 {
   display: block;
   padding: 45px 0px 18px 0px;
   font-family: "Kaushan";
@@ -321,7 +400,7 @@ a > p {
   text-align: center;
   color: #2d3033;
 }
-.list3 > .text3-2 {
+.container > .text3-2 {
   padding: 20px 0px 20px 0;
   height: 81px;
   font-family: "Raleway-Bold";
@@ -332,7 +411,7 @@ a > p {
   color: #2d3033;
 }
 
-.list3 > .text3-2::after {
+.container > .text3-2::after {
   content: "";
   display: block;
   height: 5px;
@@ -342,8 +421,11 @@ a > p {
 }
 
 .servies-logo {
-  height: 130px;
-  margin: 100px 170px 150px 170px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+  min-height: 300px;
 }
 
 .servies-logo > div {
@@ -390,74 +472,31 @@ a > p {
 }
 /* LIST 4 */
 
-.list4 {
-  max-height: 870px;
-  max-width: 100%;
+.for_all_devices {
+  min-height: 870px;
+  /* max-width: 100%; */
   background-image: url(./images/mountains.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%;
+  background-size: cover;
   display: block;
 }
-.page4 {
+.background_for_all_devices {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-.text4-1 {
-  padding: 42px 170px 42px 170px;
-  font-family: "Kaushan";
-  font-style: normal;
-  font-size: 30px;
-  line-height: 44px;
-  text-align: center;
-  vertical-align: middle;
-  color: #2d3033;
-}
-
-.text4-2 {
-  text-align: center;
-  width: 100%;
-  height: 81px;
-  font-family: "Raleway-Bold";
-  font-style: normal;
-  color: #2d3033;
-  font-size: 36px;
-  line-height: 42px;
-  vertical-align: middle;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.text4-2::after {
-  content: "";
-  display: block;
-  height: 5px;
-  width: 170px;
-  background: #f38281;
-  margin: 42px auto;
-}
 .devices {
   margin-top: 60px;
   padding-bottom: 60px;
+  display: flex;
+  justify-content: center;
+  position: relative;
 }
-.devices > .tablet-pc {
-  margin-top: 60px;
-  background-image: url(./images/Tablet-FON.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  display: block;
-  text-align: center;
-}
-
 .devices > .Iphone {
   position: absolute;
-  top: 321%;
-  left: 63%;
-  display: inline-block;
-  background-image: url(./images/Iphone-FON.png);
-  background-repeat: no-repeat;
+  top: 38%;
+  left: 66%;
 }
-
 .list5 {
   background: #e5e5e5;
   text-align: center;
