@@ -173,22 +173,10 @@ A {
 /* не получилось сделать норм гаведение на 
 эту кнопку */
 .container > .bottom :hover {
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 21px;
-  align-items: center;
-  text-align: center;
-  text-transform: uppercase;
   color: #e4be8d;
   background-color: #ffffff;
 }
 .bottoms > div {
-  height: 85px;
-  width: 260px;
-  margin-left: 30px;
-  border-top: 4px solid #ffffff;
   font-family: "Raleway";
   font-style: normal;
   font-weight: bold;
@@ -196,18 +184,28 @@ A {
   line-height: 42px;
   text-align: left;
   text-transform: uppercase;
-  padding-top: 20px;
   color: #ffffff;
+  transition: 0.5s;
+  margin-right: 30px;
+}
+.bottoms :last-child {
+  margin-right: 0px;
+}
+.bottoms > div::before {
+  content: "";
+  height: 4px;
+  width: 260px;
+  background-color: #ffffff;
+  display: block;
+  margin-bottom: 25px;
   transition: 0.5s;
 }
 .bottoms > div :hover {
   color: #f38281;
-  border: 0px;
-  animation: step-end;
 }
-.bottoms :hover {
-  border-top: 4px solid #f38281;
-  animation: step-end;
+.bottoms > div:hover::before {
+  background-color: #f38281;
+  animation: infinite;
 }
 .bottoms {
   margin-top: 82px;
@@ -225,7 +223,6 @@ a > p {
 
 .what_we_do {
   text-align: center;
-  min-height: 1100px;
   background-color: #ffffff;
 }
 .container_what_we_do {
@@ -344,25 +341,19 @@ a > p {
   opacity: 100%;
 }
 .container_about > .about-us {
-  height: 235px;
-  width: 234px;
+  height: 252px;
+  width: 233px;
   background: #95e1d3;
-  border: solid 2px #e5e5e5;
+  border-right: solid 2px #e5e5e5;
   font-family: "Raleway";
   font-size: 23px;
   font-weight: bold;
   color: #ffffff;
 }
-.container_about > .about-us_last {
-  height: 235px;
-  width: 234px;
-  background: #95e1d3;
-  border: solid 2px #e5e5e5;
-  font-family: "Raleway";
-  font-size: 23px;
-  font-weight: bold;
-  color: #ffffff;
+.container_about > .about-us:first-child {
+  border-left: solid 2px #e5e5e5;
 }
+
 .about-us > p {
   font-family: "Raleway-Bold";
   font-size: 64px;
@@ -385,7 +376,6 @@ a > p {
 
 .we_work_with {
   text-align: center;
-  min-height: 820px;
   background: #ffffff;
 }
 .container > .text3-1 {
@@ -425,51 +415,48 @@ a > p {
   flex-wrap: wrap;
   justify-content: center;
   align-content: space-between;
-  min-height: 300px;
+  min-height: 420px;
+  margin-bottom: 80px;
 }
 
 .servies-logo > div {
-  height: 130px;
-  width: 350px;
-  display: inline-block;
-  margin-left: 35px;
+  margin-right: 30px;
   text-align: left;
+  display: flex;
+  flex-wrap: wrap;
 }
-
-.servies-logo > div > .text-service {
-  width: 270px;
-  height: 50px;
-  display: inline-block;
+.servies-logo > div > img {
+  width: 70px;
+  height: 70px;
+}
+.servies-logo > div > .servies_flexbox {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: 30px;
+  max-width: 260px;
+  min-height: 120px;
+}
+.servies-logo > div > .servies_flexbox > .text-service {
   font-family: "Raleway-Bold";
   font-style: Bold;
   font-size: 24px;
   line-height: 28px;
   line-height: 100%;
-  align: Left;
   text-transform: uppercase;
   color: #2d3033;
-  position: absolute;
-  padding-left: 33px;
-  padding-top: 20px;
 }
 
-.servies-logo > div > .text2-service {
-  width: 270px;
-  height: 80px;
+.servies-logo > div > .servies_flexbox > .text2-service {
   font-family: "Raleway";
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 21px;
-  text-align: left;
-  vertical-align: middle;
   color: #2d3033;
-  margin-left: 100px;
 }
 
-.servies-logos {
-  margin-bottom: 90px;
-}
 /* LIST 4 */
 
 .for_all_devices {
