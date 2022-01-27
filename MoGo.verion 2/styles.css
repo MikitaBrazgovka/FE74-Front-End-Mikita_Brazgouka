@@ -509,14 +509,15 @@ a > p {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin-bottom: 115px;
 }
 
 .service__main-content_list {
   display: flex;
-  /* border: solid 1px #c6cbcd; */
   flex-direction: column;
   justify-items: center;
   align-items: center;
+  margin-left: 30px;
 }
 .service__main-content_list > div {
   border: solid 1px #c6cbcd;
@@ -542,15 +543,23 @@ a > p {
   margin-left: 40px;
 }
 
-.footer5 {
-  height: auto;
+.slider-comments {
+  min-height: 255px;
   background: #f8f8f8;
-  margin-top: 115px;
-  padding: 40px 200px 40px 200px;
+  display: flex;
+  align-items: center;
 }
-
-.footer5 > div {
-  display: inline-block;
+.slider-comments_container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.slider-comments_content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 .task {
   height: 170px;
@@ -575,74 +584,49 @@ a > p {
   content: "";
   display: block;
   height: 5px;
-  width: 70px;
+  width: 10%;
   background: #f38281;
   margin: 48px 0;
 }
-.footer5 > p {
-  width: 200px;
+.slider-comments_content > p {
   font-family: "Kaushan";
   font-size: 30px;
   color: #000000;
-  display: inline;
-  position: relative;
-  left: -40%;
+  position: absolute;
+  top: 60%;
+  left: 40%;
 }
 
 /* LIST 6 */
 
-.list6 {
-  height: auto;
-  width: auto;
-  background: #e5e5e5;
-  text-align: center;
+.who-we-are {
+  background: #ffffff;
 }
-
-.text6-1 {
-  font-family: "Kaushan";
-  font-size: 24px;
-  line-height: 35px;
-  padding-top: 60px;
-}
-
-.text6-2 {
-  font-family: "Raleway-ExtraBold";
-  font-size: 36px;
-  text-transform: uppercase;
-  line-height: 42px;
-  padding-top: 42px;
-}
-
-.text6-2::after {
-  content: "";
-  display: block;
-  height: 5px;
-  width: 170px;
-  background: #f38281;
-  margin: 42px auto;
-}
-
-.text6-3 {
-  font-family: "Raleway";
-  font-size: 18px;
-  line-height: 21px;
-  color: #000000;
-  font-weight: bold;
-  padding-bottom: 42px;
-  width: 1024px;
+.who-we-are__container {
+  max-width: 1200px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 
-.team6 {
-  max-width: 1210px;
-  margin: 80px auto;
+.our-team {
+  margin: 60px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.team6 > div {
-  display: inline-block;
-  margin-left: 30px;
+.our-team > div {
+  margin: 20px 30px 20px 0;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  position: relative;
 }
-.name-6 {
+.our-team > div:last-child {
+  margin-right: 0px;
+}
+
+.name {
   font-family: "Raleway-Bold";
   font-weight: bold;
   font-size: 24px;
@@ -651,7 +635,7 @@ a > p {
   padding-top: 30px;
 }
 
-.position-6 {
+.position {
   font-family: "Raleway";
   font-weight: bold;
   font-size: 18px;
@@ -659,18 +643,62 @@ a > p {
   text-transform: uppercase;
   padding-top: 30px;
 }
+.our-team__person {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.our-team__hower {
+  display: flex;
+  width: 370px;
+  height: 424px;
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  background: linear-gradient(
+    360deg,
+    rgba(237, 215, 137, 0.9) 0%,
+    rgba(233, 130, 131, 0.9) 100%
+  );
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.3s;
+}
+.our-team__hower > a > svg > .social:hover {
+  fill: #95e1d3;
+}
+.our-team__hower > a {
+  border-right: 1px solid #f38281;
+  height: 1px;
+}
+.our-team__hower:hover {
+  opacity: 1;
+}
 
-.footer6 {
-  min-height: 210px;
+.icons-section {
   background: #f8f8f8;
 }
-.footer6 > div {
-  padding-top: 40px;
-  display: inline-block;
-  min-width: 200px;
-  text-align: center;
-  vertical-align: middle;
+.container-icons {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
+.container-icons > .icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 210px;
+}
+.icons > div {
+  flex: 1;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+}
+
 /* LIST 7 */
 .list7 {
   text-align: center;
