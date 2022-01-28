@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>forms_lesson</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="wrapper_logo">
+        <img src="./images/logo.svg" alt="Gurufy logo" />
+      </div>
+
+      <form class="wrapper_form">
+        <div class="form__title">
+          <h2>Welcome</h2>
+          <p>Please login to your account</p>
+        </div>
+
+        <div class="form__content">
+          <div class="form-item">
+            <label for="form-email"
+              ><input id="form-email" type="email" placeholder="Email Adress"
+            /></label>
+            <button>
+              <img src="./images/icon-mail.svg" alt="icon-mail" />
+            </button>
+          </div>
+
+          <div class="form-item">
+            <label for="form-password"
+              ><input id="form-password" type="password" placeholder="Password"
+            /></label>
+            <button><img src="./images/icon-eye.svg" alt="password" /></button>
+          </div>
+          <button class="form-btn">login</button>
+          <a href="/forgot-password">Forgot password?</a>
+        </div>
+        <div class="form_buttons">
+          <button class="form-btn--blue">
+            <img src="./images/icon-facebook.svg" alt="facebook icom" />
+          </button>
+          <button class="form-btn--orange">Login as guest</button>
+          <p>Don’t have an account? <a href="/registration">Register now</a></p>
+        </div>
+      </form>
+      <div class="wrapper_footer">
+        <p>
+          By signing up, you are agree with our
+          <a href="/terms-conditions">Terms & Conditions</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

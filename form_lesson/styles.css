@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+.wrapper {
+  max-width: 375px;
+  max-height: 100vh;
+  border: 1px solid #eeee;
+  padding: 45px 38px 30px;
+  font-family: "Roboto";
+  color: #1a1a1a;
+}
+
+.wrapper .form-btn {
+  padding: 16px;
+  background: #e70b89;
+  border: none;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.wrapper .form-btn--blue {
+  background-color: #3b5998;
+}
+.wrapper .form-btn--orange {
+  background-color: #fd8c00;
+}
+
+.wrapper a {
+  color: #e70b89;
+}
+.wrapper_logo {
+  text-align: center;
+  margin-bottom: 95px;
+}
+.wrapper_form {
+  margin-bottom: 65px;
+}
+
+.form__title {
+  margin-bottom: 40px;
+}
+
+.form__title h2 {
+  font-size: 49px;
+  line-height: 57px;
+  margin-bottom: 5px;
+}
+
+.form__title p {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.form-item {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.form-item:last-of-type {
+  margin-bottom: 18px;
+}
+
+.form-item input {
+  width: 100%;
+  padding: 14px 24px 16px;
+  border: 1px solid currentColor;
+}
+
+.form-item input::placeholder {
+  color: rgba(26, 26, 26, 0.56);
+}
+
+.form-item button {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+}
+
+.form__content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 35px;
+}
+
+.form__content button {
+  border: none;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.form__content > a {
+  align-self: end;
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration: none;
+}
+
+.form_buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+.form_buttons > * {
+  flex: 1;
+}
+
+.form_buttons button:not(:last-of-type) {
+  margin-right: 20px;
+}
+
+.form_buttons button {
+  padding: 16px;
+  background: #e70b89;
+  border: none;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  margin-bottom: 25px;
+}
+
+.form_buttons > p {
+  flex-basis: 100%;
+  text-align: center;
+  font-size: 12px;
+  line-height: 14px;
+}
