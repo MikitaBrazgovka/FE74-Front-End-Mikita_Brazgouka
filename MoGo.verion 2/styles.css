@@ -666,9 +666,11 @@ a > p {
   opacity: 0;
   transition: 0.3s;
 }
-.our-team__hower > a > svg > .social:hover {
+
+.our-team__hower > a :hover {
   fill: #95e1d3;
 }
+
 .our-team__hower > a {
   border-right: 1px solid #f38281;
   height: 1px;
