@@ -155,7 +155,7 @@ A {
   );
 }
 
-.container > p {
+.welcome_mogo__title {
   padding: 170px 0 77px 0;
   text-align: center;
   font-family: "Kaushan";
@@ -166,7 +166,7 @@ A {
   color: #ffffff;
 }
 
-.container > h1 {
+.welcome_mogo__main-title {
   display: block;
   font-family: "Montserrat";
   min-height: 23.1rem;
@@ -183,7 +183,7 @@ A {
   margin: 0 auto;
 }
 
-.container > h1::after {
+.welcome_mogo__main-title::after {
   content: "";
   display: block;
   height: 5px;
@@ -274,11 +274,7 @@ a > p {
   text-align: center;
   background-color: #ffffff;
 }
-.container_what_we_do {
-  max-width: 1200px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
+
 .title_of_page {
   padding: 50px 0px 50px 0px;
   text-align: center;
@@ -329,6 +325,7 @@ a > p {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-bottom: 108px;
 }
 .pictures_what_we_do > div {
   position: relative;
@@ -365,17 +362,12 @@ a > p {
   text-transform: uppercase;
   font-weight: bold;
 }
-.container_about {
-  max-width: 1200px;
-  padding: 0 15px;
-  margin: 0 auto;
+.about-us__flexbox {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 .about {
-  min-height: 235px;
-  margin-top: 108px;
   background-image: url(./images/background_picture1.png);
 }
 .what-we-do_main-picture {
@@ -398,7 +390,7 @@ a > p {
   cursor: pointer;
 }
 
-.container_about > .about-us {
+.about-us__flexbox > .about-us {
   height: 252px;
   width: 233px;
   background: #95e1d3;
@@ -408,7 +400,7 @@ a > p {
   font-weight: bold;
   color: #ffffff;
 }
-.container_about > .about-us:first-child {
+.about-us__flexbox > .about-us:first-child {
   border-left: solid 2px #e5e5e5;
 }
 
@@ -486,8 +478,6 @@ a > p {
 /* =======================for_all_devices=================== */
 
 .for_all_devices {
-  min-height: 870px;
-  /* max-width: 100%; */
   background-image: url(./images/mountains.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -515,11 +505,6 @@ a > p {
 
 .service {
   background: #ffffff;
-}
-.servise__container {
-  max-width: 1200px;
-  padding: 0 15px;
-  margin: 0 auto;
 }
 
 .service__main-content {
@@ -560,17 +545,15 @@ a > p {
   margin-left: 40px;
 }
 
+/* =========================slider_comments================= */
+
 .slider-comments {
-  min-height: 255px;
   background: #f8f8f8;
   display: flex;
   align-items: center;
+  padding: 42px 0;
 }
-.slider-comments_container {
-  max-width: 1200px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
+
 .slider-comments_content {
   display: flex;
   flex-wrap: wrap;
@@ -618,11 +601,6 @@ a > p {
 
 .who-we-are {
   background: #ffffff;
-}
-.who-we-are__container {
-  max-width: 1200px;
-  padding: 0 15px;
-  margin: 0 auto;
 }
 
 .our-team {
@@ -706,20 +684,18 @@ a > p {
   transition: 0.3s;
 }
 
+/* =====================icons-section==================== */
+
 .icons-section {
   background: #f8f8f8;
 }
-.container-icons {
-  max-width: 1200px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-.container-icons > .icons {
+
+.icons {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  min-height: 210px;
+  padding: 45px 0;
 }
 .icons > div {
   flex: 1;
@@ -796,10 +772,10 @@ a > p {
 /* =============slider-rewiews=============== */
 
 .slider-rewiews {
-  min-height: 255px;
   background: #ffffff;
   display: flex;
   align-items: center;
+  padding: 42px 0;
 }
 
 .slider-rewiews_content {
@@ -856,9 +832,7 @@ a > p {
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 2.625rem;
-  min-height: 37.5rem;
   justify-content: center;
-  /* align-content: space-between; */
 }
 .rewiews-block > .rewiew {
   display: flex;
