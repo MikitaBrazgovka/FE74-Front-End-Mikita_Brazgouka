@@ -495,12 +495,18 @@ a > p {
   justify-content: center;
   position: relative;
 }
+
+.tablet-pc > img {
+  width: 100%;
+}
 .devices > .Iphone {
   position: absolute;
   top: 38%;
   left: 66%;
 }
-
+.Iphone > img {
+  width: 100%;
+}
 /* =======================SERVISE ============================*/
 
 .service {
@@ -513,24 +519,45 @@ a > p {
   justify-content: space-around;
   margin-bottom: 115px;
 }
-
+.service__main-photo > img {
+  width: 100%;
+}
 .service__main-content_list {
   display: flex;
   flex-direction: column;
   justify-items: center;
   align-items: center;
   margin-left: 30px;
+  flex-grow: 1;
 }
 .service__main-content_list > div {
   border: solid 1px #c6cbcd;
   margin-bottom: 22px;
-  width: 570px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  max-height: 255px;
+  max-width: 570px;
+}
+.service__main-content_list > div > .main-content_title {
+  border-bottom: solid 1px #c6cbcd;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 20px;
+  max-width: 570px;
 }
-.service__main-content_list > div > img {
+.service__main-content_list > div > .text {
+  font-family: "Raleway";
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 21px;
+  color: #2d3033;
+  padding: 22px 85px 22px 22px;
+  overflow: scroll;
+}
+.service__main-content_list > div > .main-content_title > img {
   width: 42px;
   height: 42px;
 }
