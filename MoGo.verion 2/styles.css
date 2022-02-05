@@ -43,8 +43,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 100px;
   flex-wrap: wrap;
+  padding: 42px 0;
 }
 .logo ::after {
   content: "";
@@ -64,6 +64,7 @@ header {
 }
 .svg_logo:hover {
   fill: #f4bf87;
+  transition: 0.3s;
 }
 
 .menu {
@@ -138,8 +139,31 @@ A {
   text-decoration: none;
 }
 
-/* ================welcome_mogo======================= */
+@media (max-width: 1025px) {
+  .svg_logo {
+    width: 66px;
+    height: 17.7px;
+  }
+  .logo ::after {
+    height: 0.5px;
+  }
+  .menu > li {
+    font-size: 13px;
+    line-height: 15px;
+  }
+  .menu > li::after {
+    height: 0.5px;
+  }
+  .search_and_buy > div > a > svg {
+    height: 16px;
+    width: 16px;
+  }
+  .search_and_buy > div > a::after {
+    height: 0.5px;
+  }
+}
 
+/* ================welcome_mogo======================= */
 .welcome_mogo {
   background-image: url(./images/Eagle_2.png);
   background-repeat: no-repeat;
@@ -156,7 +180,6 @@ A {
 }
 
 .welcome_mogo__title {
-  padding: 170px 0 77px 0;
   text-align: center;
   font-family: "Kaushan";
   font-style: normal;
@@ -164,30 +187,27 @@ A {
   font-size: 64px;
   line-height: 93px;
   color: #ffffff;
+  padding-top: 150px;
 }
 
 .welcome_mogo__main-title {
   display: block;
   font-family: "Montserrat";
-  min-height: 23.1rem;
   font-style: normal;
-  font-weight: bolder;
+  font-weight: bold;
   font-size: 9rem;
   line-height: 11rem;
-  max-width: 1000px;
-  align-items: center;
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
-  padding-bottom: 10px;
-  margin: 0 auto;
+  padding: 25px 60px;
 }
 
 .welcome_mogo__main-title::after {
   content: "";
   display: block;
   height: 5px;
-  width: 170px;
+  max-width: 170px;
   background: #ffffff;
   margin: 42px auto 75px auto;
 }
@@ -261,13 +281,33 @@ A {
   flex-wrap: wrap;
   justify-content: center;
 }
-a > p {
+.bottoms > div > a > p {
   display: inline-block;
   font-family: "Raleway-Bold";
   font-size: 36px;
   font-weight: bold;
 }
+@media (max-width: 1025px) {
+  .welcome_mogo__title {
+    font-size: 48px;
+    line-height: 70px;
+  }
 
+  .welcome_mogo__main-title {
+    font-size: 96px;
+    line-height: 117px;
+    padding: 25px 150px;
+  }
+
+  .bottoms > div {
+    font-size: 16px;
+    line-height: 28px;
+    padding-bottom: 15px;
+  }
+  .bottoms > div > a > p {
+    font-size: 24px;
+  }
+}
 /* =======================what_we_do======================== */
 
 .what_we_do {
@@ -323,17 +363,21 @@ a > p {
 
 .pictures_what_we_do {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 30px;
   margin-bottom: 108px;
 }
 .pictures_what_we_do > div {
   position: relative;
+  flex: 1;
+  max-width: 370px;
+  max-height: 338px;
 }
 
 .hower_what_we_do {
-  width: 370px;
-  height: 338px;
+  max-width: 370px;
+  max-height: 338px;
   background: linear-gradient(
     360deg,
     rgba(237, 215, 137, 0.9) 0%,
@@ -349,6 +393,8 @@ a > p {
   align-items: center;
   transition: 0.3s;
   opacity: 0%;
+  width: 100%;
+  height: 100%;
 }
 .hower_what_we_do > img {
   width: 40px;
@@ -376,7 +422,10 @@ a > p {
   background-position: center;
   background-size: cover;
 }
-
+.what-we-do_main-picture > img {
+  width: 100%;
+  height: 100%;
+}
 .picture_what_we_do:hover .what-we-do_main-picture > img {
   opacity: 0;
   cursor: pointer;
@@ -391,14 +440,17 @@ a > p {
 }
 
 .about-us__flexbox > .about-us {
-  height: 252px;
-  width: 233px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: #95e1d3;
   border-right: solid 2px #e5e5e5;
   font-family: "Raleway";
   font-size: 23px;
   font-weight: bold;
   color: #ffffff;
+  padding: 45px;
 }
 .about-us__flexbox > .about-us:first-child {
   border-left: solid 2px #e5e5e5;
@@ -409,8 +461,7 @@ a > p {
   font-size: 64px;
   font-weight: bold;
   color: #ffffff;
-  padding-top: 60px;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .about-us_last > p {
@@ -420,6 +471,55 @@ a > p {
   color: #ffffff;
   padding-top: 60px;
   padding-bottom: 20px;
+}
+
+@media (max-width: 1180px) {
+  .about-us__flexbox > .about-us {
+    padding: 35px;
+  }
+  .about-us > p {
+    font-size: 48px;
+    line-height: 56px;
+  }
+  .about-us__flexbox > .about-us {
+    font-size: 20px;
+    padding: 35px;
+  }
+}
+
+@media (max-width: 1025px) {
+  .title_of_page > .main_title {
+    font-size: 24px;
+    line-height: 35px;
+  }
+  .title_of_page > .subtitle {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .pictures_what_we_do > div {
+    width: 320px;
+    height: 282px;
+  }
+  .hower_what_we_do > img {
+    width: 33px;
+    height: 33px;
+  }
+  .hower_what_we_do > p {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .about-us > p {
+    font-size: 48px;
+    line-height: 56px;
+  }
+  .about-us__flexbox > .about-us {
+    font-size: 20px;
+    padding: 35px;
+  }
+  .title_of_page > .text_title {
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
 
 /* =====================we_work_with========================== */
@@ -435,10 +535,10 @@ a > p {
   align-content: space-between;
   min-height: 420px;
   margin-bottom: 80px;
+  gap: 30px;
 }
 
 .servies-logo > div {
-  margin-right: 30px;
   text-align: left;
   display: flex;
   flex-wrap: wrap;
@@ -475,6 +575,26 @@ a > p {
   color: #2d3033;
 }
 
+@media (max-width: 1170px) {
+  .servies-logo {
+    min-height: 300px;
+  }
+  .servies-logo > div > img {
+    width: 59px;
+    height: 59px;
+  }
+  .servies-logo > div > .servies_flexbox > .text-service {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .servies-logo > div > .servies_flexbox > .text2-service {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .servies-logo > div > .servies_flexbox {
+    max-width: 220px;
+  }
+}
 /* =======================for_all_devices=================== */
 
 .for_all_devices {
@@ -489,7 +609,6 @@ a > p {
 }
 
 .devices {
-  margin-top: 60px;
   padding-bottom: 60px;
   display: flex;
   justify-content: center;
