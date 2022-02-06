@@ -487,6 +487,10 @@ A {
     font-size: 20px;
     padding: 35px;
   }
+  .hower_what_we_do {
+    top: -7px;
+    left: -7px;
+  }
 }
 
 @media (max-width: 1025px) {
@@ -500,7 +504,6 @@ A {
   }
   .pictures_what_we_do > div {
     width: 320px;
-    height: 282px;
   }
   .hower_what_we_do > img {
     width: 33px;
@@ -1346,6 +1349,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 2.625rem;
+  gap: 1.875rem;
 }
 
 .footer-flexbox > div {
@@ -1354,7 +1358,6 @@ footer {
 .footer-block-one {
   display: flex;
   flex-direction: column;
-  margin-right: 1.875rem;
   justify-content: space-between;
 }
 .footer-block-one > .footer-logo {
@@ -1448,7 +1451,7 @@ form > button:hover {
 .footer-block-two {
   display: flex;
   flex-direction: column;
-  margin-right: 1.875rem;
+  gap: 20px;
 }
 .footer-block-two > h3 {
   font-family: "Raleway-Bold";
@@ -1456,15 +1459,11 @@ form > button:hover {
   font-size: 24px;
   color: #2d3033;
   text-transform: uppercase;
-  margin-bottom: 30px;
 }
 .footer-block-two > div {
   display: flex;
-  margin-bottom: 1.25rem;
 }
-.footer-block-two > div:last-child {
-  margin-bottom: 0;
-}
+
 .footer-block-two > div > .blog {
   font-family: "Raleway-Bold";
   font-weight: bold;
@@ -1501,7 +1500,6 @@ form > button:hover {
 .footer-block-three__images > img {
   width: 90px;
   height: 88px;
-  /* flex: 33%; */
 }
 .footer-block-three > a {
   font-family: "Raleway";
@@ -1510,6 +1508,91 @@ form > button:hover {
   color: #2d3033;
   text-transform: uppercase;
   text-decoration: underline;
+}
+
+@media (max-width: 1060px) {
+  .footer-logo > img {
+    width: 5.9rem;
+    height: 1.6rem;
+  }
+  .footer-block-one {
+    justify-content: flex-start;
+  }
+
+  .footer-block-one > .footer_info {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 0.5rem;
+  }
+  .footer_followers {
+    font-size: 14px;
+  }
+  .footer_followers::after {
+    margin-bottom: 0;
+  }
+  .footer-block-one > .follow_us {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+  .follow_us > li > a > img {
+    width: 1rem;
+    height: 1rem;
+  }
+  form > input {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  form > button {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .footer-block-two > h3 {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .footer-block-one {
+    gap: 1rem;
+  }
+  .footer-block-two {
+    justify-content: space-between;
+  }
+  .footer-block-two > div > img {
+    width: 115px;
+    height: 71px;
+  }
+
+  .footer-block-two > div > .blog {
+    font-size: 14px;
+    line-height: 16px;
+    min-width: 14rem;
+  }
+
+  .footer-block-two > div > .blog > span {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .footer-block-three {
+    justify-content: space-between;
+  }
+  .footer-block-three > h3 {
+    font-size: 18px;
+    line-height: 21px;
+    padding: 0;
+  }
+
+  .footer-block-three__images > img {
+    width: 78px;
+    height: 76px;
+  }
+
+  .footer-block-three > a {
+    font-size: 12px;
+    line-height: 14px;
+  }
 }
 
 .underfooter::before {
