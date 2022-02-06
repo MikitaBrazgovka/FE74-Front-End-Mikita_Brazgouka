@@ -373,11 +373,13 @@ A {
   flex: 1;
   max-width: 370px;
   max-height: 338px;
+  min-width: 288px;
+  min-height: 258px;
 }
 
 .hower_what_we_do {
-  max-width: 370px;
-  max-height: 338px;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(
     360deg,
     rgba(237, 215, 137, 0.9) 0%,
@@ -622,10 +624,19 @@ A {
   position: absolute;
   top: 38%;
   left: 66%;
+  max-width: 200px;
+  max-height: 412px;
 }
 .Iphone > img {
   width: 100%;
 }
+
+@media (max-width: 1025px) {
+  .Iphone > img {
+    width: 85%;
+  }
+}
+
 /* =======================SERVISE ============================*/
 
 .service {
@@ -634,6 +645,8 @@ A {
 
 .service__main-content {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   justify-content: space-around;
   margin-bottom: 115px;
@@ -665,7 +678,6 @@ A {
   flex-direction: row;
   align-items: center;
   padding: 20px;
-  max-width: 570px;
 }
 .service__main-content_list > div > .text {
   font-family: "Raleway";
@@ -691,6 +703,29 @@ A {
   margin-left: 40px;
 }
 
+@media (max-width: 1200px) {
+  .service__main-photo {
+    width: 478px;
+    height: 438px;
+  }
+  .service__main-content_list > div {
+    max-height: 216px;
+    max-width: 486px;
+  }
+  .service__main-content_list > div > .main-content_title > img {
+    width: 35px;
+    height: 35px;
+  }
+  .service__main-content_list > div > .main-content_title > p {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .service__main-content_list > div > .text {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
 /* =========================slider_comments================= */
 
 .slider-comments {
@@ -714,7 +749,10 @@ A {
   padding: 30px;
   margin-left: 58px;
 }
-
+.task > img {
+  width: 100%;
+  height: 100%;
+}
 .text_footer5 {
   max-width: 770px;
   vertical-align: top;
@@ -742,7 +780,26 @@ A {
   top: 60%;
   left: 40%;
 }
+@media (max-width: 1165px) {
+  .slider-comments {
+    padding: 28px 0;
+  }
+  .task {
+    height: 115px;
+    width: 115px;
+    padding: 23px;
+  }
 
+  .text_footer5 > p {
+    font-size: 18px;
+    line-height: 21px;
+    max-width: 680px;
+  }
+  .slider-comments_content > p {
+    font-size: 24px;
+    line-height: 35px;
+  }
+}
 /* =========================who_we_are====================== */
 
 .who-we-are {
@@ -750,21 +807,19 @@ A {
 }
 
 .our-team {
-  margin: 60px 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 30px;
 }
 
 .our-team > div {
-  margin: 20px 30px 20px 0;
+  max-width: 370px;
+  margin: 20px 0;
   display: flex;
   align-items: center;
   flex: 1;
   position: relative;
-}
-.our-team > div:last-child {
-  margin-right: 0px;
 }
 
 .name {
@@ -790,10 +845,13 @@ A {
   justify-content: center;
   align-items: center;
 }
+.our-team__person > img {
+  width: 100%;
+}
 .our-team__hower {
   display: flex;
   width: 370px;
-  height: 424px;
+  min-height: 424px;
   position: absolute;
   top: -16px;
   left: -16px;
@@ -830,6 +888,32 @@ A {
   transition: 0.3s;
 }
 
+@media (max-width: 1200px) {
+  .our-team {
+    gap: 20px;
+  }
+  .our-team > div {
+    width: 320px;
+  }
+  .our-team__hower {
+    min-height: 79%;
+    width: 100%;
+    top: -4px;
+    left: -4px;
+  }
+  .name {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .position {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .our-team__person > img {
+    height: 84%;
+    width: 100%;
+  }
+}
 /* =====================icons-section==================== */
 
 .icons-section {
@@ -915,6 +999,28 @@ A {
   cursor: pointer;
 }
 
+@media (max-width: 1511px) {
+  .block-work > div {
+    width: 255px;
+  }
+  .block-work_picture > img {
+    width: 100%;
+    height: auto;
+  }
+  .block-work_hover > h4 {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .block-work_hover > p {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .block-work_hover > img {
+    width: 1.78rem;
+    height: 1.78rem;
+    margin-bottom: 2.5rem;
+  }
+}
 /* =============slider-rewiews=============== */
 
 .slider-rewiews {
@@ -962,7 +1068,24 @@ A {
   top: 60%;
   left: 40%;
 }
-
+@media (max-width: 1170px) {
+  .slider-rewiews_task > img {
+    width: 115px;
+    height: 115px;
+  }
+  .text_footer5 {
+    max-width: 680px;
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .slider-rewiews_content > p {
+    font-size: 24px;
+    line-height: 35px;
+    position: absolute;
+    top: 60%;
+    left: 40%;
+  }
+}
 /* ================happy-clients================= */
 
 .happy-clients {
@@ -1032,6 +1155,30 @@ A {
   font-size: 18px;
 }
 
+@media (max-width: 1035px) {
+  .rewiews-block > .rewiew > img {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+  .text-rewiew > .rewiewer {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .text-rewiew > .profession {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .text-rewiew > .text-rewiew_text {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .text-rewiew > .profession::after {
+    height: 0.2rem;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+}
+
 /* ================our-stories================ */
 
 .our-stories {
@@ -1042,6 +1189,7 @@ A {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  gap: 30px;
   margin-bottom: 8.5rem;
 }
 
@@ -1053,11 +1201,11 @@ A {
   display: flex;
   flex-direction: column;
   flex: 1;
-  margin-right: 30px;
   position: relative;
 }
 .latest_blog > .latest_blog__main-image {
   margin-bottom: 1.875rem;
+  width: 100%;
 }
 .latest_blog > h3 {
   font-family: "Raleway-Bold";
@@ -1099,10 +1247,35 @@ A {
   left: -14px;
 }
 
-/* =====================latest_blog__footer================= */
+@media (max-width: 1070px) {
+  .calender-date {
+    width: 4.1rem;
+    height: 4.1rem;
+    top: 125px;
+    left: -6px;
+  }
 
+  .latest_blog > h3 {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .latest_blog > p {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .looked {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+  .looked-comments > p {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+/* =====================latest_blog__footer================= */
 .latest_blog__footer {
-  min-height: 231px;
   background-image: url(./images/background_latest\ blog.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -1114,9 +1287,12 @@ A {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 231px;
+  padding: 42px 0;
 }
-
+.map-pointer > img {
+  width: 100%;
+  height: 100%;
+}
 .map-pointer {
   width: 2.625rem;
   height: 2.625rem;
@@ -1140,6 +1316,25 @@ A {
   margin: 42px auto 0;
 }
 
+@media (max-width: 1025px) {
+  .latest_blog__footer-flexbox {
+    padding: 29px 0;
+  }
+  .map-pointer {
+    width: 1.78rem;
+    height: 1.78rem;
+    margin-bottom: 1.5rem;
+  }
+  .latest_blog__footer__title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .latest_blog__footer__title::after {
+    height: 3px;
+    width: 150px;
+    margin: 30px auto 0;
+  }
+}
 /* ======================footer============================ */
 
 footer {
