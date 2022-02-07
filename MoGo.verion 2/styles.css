@@ -689,7 +689,7 @@ A {
   line-height: 21px;
   color: #2d3033;
   padding: 22px 85px 22px 22px;
-  overflow: scroll;
+  overflow: auto;
 }
 .service__main-content_list > div > .main-content_title > img {
   width: 42px;
