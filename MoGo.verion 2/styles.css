@@ -649,10 +649,11 @@ A {
 .service__main-content {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   justify-content: space-around;
   margin-bottom: 115px;
+  gap: 30px;
 }
 .service__main-photo > img {
   width: 100%;
@@ -662,7 +663,6 @@ A {
   flex-direction: column;
   justify-items: center;
   align-items: center;
-  margin-left: 30px;
   flex-grow: 1;
 }
 .service__main-content_list > div {
@@ -709,11 +709,11 @@ A {
 @media (max-width: 1200px) {
   .service__main-photo {
     width: 478px;
-    height: 438px;
+    height: 409px;
   }
   .service__main-content_list > div {
-    max-height: 216px;
-    max-width: 486px;
+    max-height: 200px;
+    max-width: 465px;
   }
   .service__main-content_list > div > .main-content_title > img {
     width: 35px;
@@ -783,7 +783,7 @@ A {
   top: 60%;
   left: 40%;
 }
-@media (max-width: 1165px) {
+@media (max-width: 1180px) {
   .slider-comments {
     padding: 28px 0;
   }
@@ -796,7 +796,7 @@ A {
   .text_footer5 > p {
     font-size: 18px;
     line-height: 21px;
-    max-width: 680px;
+    max-width: 670px;
   }
   .slider-comments_content > p {
     font-size: 24px;
@@ -1003,8 +1003,11 @@ A {
 }
 
 @media (max-width: 1511px) {
+  .block-works {
+    margin-bottom: 58px;
+  }
   .block-work > div {
-    width: 255px;
+    width: 250px;
   }
   .block-work_picture > img {
     width: 100%;
@@ -1071,13 +1074,13 @@ A {
   top: 60%;
   left: 40%;
 }
-@media (max-width: 1170px) {
+@media (max-width: 1180px) {
   .slider-rewiews_task > img {
     width: 115px;
     height: 115px;
   }
   .text_footer5 {
-    max-width: 680px;
+    max-width: 670px;
     font-size: 18px;
     line-height: 21px;
   }
@@ -1105,12 +1108,14 @@ A {
   flex-wrap: wrap;
   padding-bottom: 2.625rem;
   justify-content: center;
+  gap: 50px;
 }
 .rewiews-block > .rewiew {
   display: flex;
   justify-content: space-between;
-  flex-basis: 50%;
+  flex-basis: 45%;
   margin-bottom: 3rem;
+  gap: 50px;
 }
 .rewiews-block > .rewiew > img {
   width: 8.125rem;
@@ -1119,9 +1124,7 @@ A {
 .rewiew > .text-rewiew {
   display: flex;
   flex-direction: column;
-  /* margin-left: 3.125rem; */
   min-width: 23.125rem;
-  padding: 0 50px;
 }
 
 .text-rewiew > .rewiewer {
@@ -1158,7 +1161,7 @@ A {
   font-size: 18px;
 }
 
-@media (max-width: 1035px) {
+@media (max-width: 1200px) {
   .rewiews-block > .rewiew > img {
     width: 5.5rem;
     height: 5.5rem;
@@ -1180,6 +1183,9 @@ A {
     margin-top: 20px;
     margin-bottom: 30px;
   }
+  .rewiew > .text-rewiew {
+    min-width: 19.75rem;
+  }
 }
 
 /* ================our-stories================ */
@@ -1193,7 +1199,7 @@ A {
   justify-content: center;
   align-items: center;
   gap: 30px;
-  margin-bottom: 8.5rem;
+  margin-bottom: 5.5rem;
 }
 
 .latest-blogs > .latest_blog:last-child {
