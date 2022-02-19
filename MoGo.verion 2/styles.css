@@ -353,6 +353,11 @@ A {
     font-size: 24px;
   }
 }
+@media (max-width: 900px) {
+  .welcome_mogo__main-title {
+    padding: 25px 0px;
+  }
+}
 
 @media (max-width: 550px) {
   .welcome_mogo__title {
@@ -538,7 +543,7 @@ A {
   padding-bottom: 20px;
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1200px) {
   .about-us__flexbox > .about-us {
     padding: 35px;
   }
@@ -589,12 +594,26 @@ A {
     line-height: 16px;
   }
 }
+@media (max-width: 1010px) {
+  .about-us__flexbox > .about-us {
+    padding: 15px;
+    border-bottom: solid 2px #e5e5e5;
+    border-right: 0;
+    border-left: 0;
+  }
 
+  .about-us__flexbox > .about-us:first-child {
+    border-left: 0;
+  }
+}
 @media (max-width: 550px) {
+  .what-we-do_main-picture {
+    display: flex;
+  }
   .hower_what_we_do {
     top: auto;
     left: 0;
-    bottom: 4px;
+    bottom: 0;
     z-index: 10;
     display: flex;
     flex-direction: row;
@@ -642,7 +661,7 @@ A {
   }
 
   .about-us__flexbox > .about-us:first-child {
-    border-left: none;
+    border-left: 0;
   }
   .about-us__flexbox > .about-us:last-child {
     border-left: none;
@@ -772,7 +791,11 @@ A {
     width: 85%;
   }
 }
-
+@media (max-width: 900px) {
+  .Iphone > img {
+    width: 60%;
+  }
+}
 @media (max-width: 550px) {
   .Iphone > img {
     width: 60%;
@@ -977,8 +1000,14 @@ A {
     line-height: 35px;
   }
 }
-
-@media (max-width: 550px) {
+@media (max-width: 1024px) {
+  .text_footer5 > p {
+    font-size: 18px;
+    line-height: 21px;
+    max-width: 570px;
+  }
+}
+@media (max-width: 930px) {
   .arrow_left {
     display: none;
   }
@@ -1139,6 +1168,11 @@ A {
     justify-content: end;
     align-items: flex-end;
     opacity: 1;
+  }
+
+  .our-team__photo {
+    max-height: 236px;
+    display: flex;
   }
 }
 /* =====================icons-section==================== */
@@ -1370,8 +1404,16 @@ A {
     left: 40%;
   }
 }
+@media (max-width: 1024px) {
+  .slider-rewiews_task {
+    margin-bottom: 41px;
+  }
 
-@media (max-width: 550px) {
+  .text_footer5 {
+    max-width: 540px;
+  }
+}
+@media (max-width: 815px) {
   .text_footer5 {
     margin: 0;
     font-size: 14px;
